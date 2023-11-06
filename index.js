@@ -2,7 +2,7 @@
 // So we don't have ridiculous errors.
 window.onload = function () {
     //Censored words
-    const censoredWords = ["kanker", "Kanker", "neger", "Neger", "fuck", "Fuck"]
+    const censoredWords = ["kanker", "neger", "homo", "flikker", "mongool", "kankerhond"]
 
 
     // Your web app's Firebase configuration
@@ -180,11 +180,19 @@ window.onload = function () {
                         // Send the message. Pass in the chat_input.value
                         let input_list = chat_input.value.split(" ")
 
+                        let stars = ""
                         for (let i = 0; i < input_list.length; i++) {
-                            if (censoredWords.includes(input_list[i])) {
-                                input_list[i] = "****"
+                            if (censoredWords.includes(input_list[i].toLowerCase())) {
+                                for (let j = 0; j < input_list[i].length; j++){
+                                    stars += "*"
+                                }
+                                input_list[i] = stars
+
                             }
+                            stars = ""
                         }
+
+
 
                         let string = "";
                         for (let i = 0; i < input_list.length; i++) {
