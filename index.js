@@ -2,7 +2,7 @@
 // So we don't have ridiculous errors.
 window.onload = function () {
     //Censored words
-    const censoredWords = ["kanker", "neger", "homo", "flikker", "mongool", "kankerhond"]
+    const censoredWords = ["kanker", "neger", "cancer", "nigger", "homo", "flikker", "mongool", "kankerhond", "nigga"]
 
 
     // Your web app's Firebase configuration
